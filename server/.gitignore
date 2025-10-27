@@ -1,0 +1,9 @@
+node_modules
+.env
+
+pnpm-lock.yaml
+shortcutkey.txt
+
+data-json
+
+PurchaseFormC.jsx

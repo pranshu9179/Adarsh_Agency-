@@ -1,0 +1,133 @@
+/* * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+
+.page-break {
+  page-break-after: always;
+
+  margin-bottom: 40px;
+
+  border-bottom: 2px dashed #000;
+
+}
+
+
+@media print {
+  body * {
+    visibility: hidden;
+  }
+
+  #invoice-container,
+  #invoice-container * {
+    visibility: visible;
+    width: 100vw !important;
+  }
+
+  #invoice-container {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100vw;
+  }
+} */
+
+
+
+/* Invoice.css */
+/* Invoice.css */
+
+/* Ensure full A4 size with no page overflow */
+.invoice-page {
+  width: 210mm;
+  min-height: 297mm;
+  padding: 15mm;
+  margin: auto;
+  /* background: #fff; */
+  /* border: 1px solid #ccc; */
+  box-sizing: border-box;
+  position: relative;
+  font-size: 13px;
+}
+
+.page-break {
+  page-break-after: always;
+}
+
+.invoice-header h5 {
+  font-weight: bold;
+  font-size: 24px;
+  /* margin-bottom: 5px; */
+}
+
+.invoice-header p {
+  margin: 0;
+  font-size: 14px;
+}
+
+.customer-info,
+.billing-info {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.table th,
+.table td {
+  vertical-align: middle;
+  padding: 4px;
+  text-align: center;
+  font-size: 12px;
+  border: 1px solid #000 !important;
+}
+
+.invoice-footer {
+  margin-top: 20px;
+  font-size: 13px;
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid #000;
+  padding-top: 10px;
+}
+
+.invoice-footer-left p {
+  margin: 0;
+}
+
+.invoice-footer-right {
+  text-align: center;
+}
+
+.invoice-footer-right h5 {
+  margin-bottom: 10px;
+}
+
+@media print {
+  body {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    margin: 0;
+  }
+
+  .btn,
+  .d-print-none {
+    display: none !important;
+  }
+
+  .invoice-page {
+    page-break-inside: avoid;
+    background: #fff !important;
+    border: none !important;
+  }
+
+  .page-break {
+    page-break-after: always;
+  }
+}

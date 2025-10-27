@@ -1,0 +1,28 @@
+@media print {
+    @page {
+        size: A5 landscape;
+        margin: 8mm;
+    }
+
+    body * {
+        visibility: hidden;
+    }
+
+    #print-section,
+    #print-section * {
+        visibility: visible;
+    }
+
+    #print-section {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        font-family: "Courier New", monospace;
+        background-color: white;
+    }
+
+    .d-print-none {
+        display: none !important;
+    }
+}
