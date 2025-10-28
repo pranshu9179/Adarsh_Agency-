@@ -22,14 +22,16 @@ const Login = ({ setUserDetail }) => {
     e.preventDefault();
 
     try {
-      const res = await axios.post("/login/salesman", form, { withCredentials: true });
-      console.log("Response:", res.data);  // Debugging the response
+      const res = await axios.post("/login/salesman", form, {
+        withCredentials: true,
+      });
+      console.log("Response:", res.data); // Debugging the response
 
       if (res?.data?.status) {
-        setUserDetail(res.data);  // Save user details
-        localStorage.setItem("userData", JSON.stringify(res.data));  // Save to localStorage
+        setUserDetail(res.data); // Save user details
+        localStorage.setItem("userData", JSON.stringify(res.data)); // Save to localStorage
 
-        navigate("/");  // Redirect to the Dashboard
+        navigate("/"); // Redirect to the Dashboard
       } else {
         toast.error("Login failed. Please check your credentials.");
       }
